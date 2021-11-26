@@ -16,7 +16,7 @@ do
     UPGRADE_COMMAND="${UPGRADE_COMMAND} -f ${config_file}"
 done
 if [ -n "$DEPLOY_NAMESPACE" ]; then
-    UPGRADE_COMMAND="${UPGRADE_COMMAND} -n ${DEPLOY_NAMESPACE}"
+    UPGRADE_COMMAND="${UPGRADE_COMMAND} -n ${DEPLOY_NAMESPACE} --create-namespace"
 fi
 if [ -n "$DEPLOY_VALUES" ]; then
     UPGRADE_COMMAND="${UPGRADE_COMMAND} --set ${DEPLOY_VALUES}"
